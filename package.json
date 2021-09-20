@@ -1,0 +1,65 @@
+{
+  "name": "studo.js",
+  "version": "0.1.0",
+  "description": "Client to interact with the studo app's API",
+  "author": "j4k0xb",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "npm run build -- --watch",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
+    "prepare": "husky install"
+  },
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs",
+    "default": "./dist/index.mjs"
+  },
+  "repository": "https://github.com/j4k0xb/studo.js",
+  "homepage": "https://github.com/j4k0xb/studo.js#readme",
+  "bugs": "https://github.com/j4k0xb/studo.js/issues",
+  "keywords": [
+    "studo",
+    "moshbit",
+    "university",
+    "client",
+    "websocket",
+    "onesignal",
+    "typescript"
+  ],
+  "dependencies": {
+    "@discordjs/collection": "^0.2.1",
+    "cross-fetch": "^3.1.4",
+    "emittery": "^0.10.0",
+    "fflate": "^0.7.1",
+    "nanoid": "^3.1.25",
+    "rfc4648": "^1.5.0",
+    "socket.io-client": "<=2.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/socket.io-client": "^1.4.36",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "esbuild": "^0.12.26",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "jest": "^27.1.1",
+    "prettier": "^2.4.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  }
+}
