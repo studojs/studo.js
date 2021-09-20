@@ -1,7 +1,7 @@
-studo.js<br>
+# studo.js<br>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CI](https://github.com/j4k0xb/studo.js/workflows/CI/badge.svg)](https://github.com/j4k0xb/studo.js/actions)
-================
+![CI](https://github.com/studojs/studo.js/actions/workflows/ci.yml/badge.svg)
 
 Client to interact with the [studo app](https://play.google.com/store/apps/details?id=com.moshbit.studo)'s rest/socket.io API.
 

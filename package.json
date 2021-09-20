@@ -1,6 +1,6 @@
 {
   "name": "studo.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Client to interact with the studo app's API",
   "author": "j4k0xb",
   "main": "dist/index.js",
@@ -23,9 +23,9 @@
     "import": "./dist/index.mjs",
     "default": "./dist/index.mjs"
   },
-  "repository": "https://github.com/j4k0xb/studo.js",
-  "homepage": "https://github.com/j4k0xb/studo.js#readme",
-  "bugs": "https://github.com/j4k0xb/studo.js/issues",
+  "repository": "https://github.com/studojs/studo.js",
+  "homepage": "https://github.com/studojs/studo.js#readme",
+  "bugs": "https://github.com/studojs/studo.js/issues",
   "keywords": [
     "studo",
     "moshbit",
