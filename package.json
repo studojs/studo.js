@@ -1,6 +1,6 @@
 {
   "name": "studo.js",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Client to interact with the studo app's API",
   "author": "j4k0xb",
   "type": "module",
