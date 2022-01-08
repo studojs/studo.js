@@ -1,7 +1,7 @@
 import { Client } from '../client';
-import { Collection } from '../utils';
-import { parseRawIds } from '../utils/index';
+import { Collection, parseRawIds } from '../utils';
 import { Channel } from './channel';
+import { NewMessageOptions } from './command';
 import { Message } from './message';
 import { Tab } from './tab';
 import { ChatPayloadStyle, ToolbarAction, VoteType, VotingType } from './types';
@@ -131,8 +131,8 @@ export class Topic {
     return this.client.cache.tabs.get(this.tabId);
   }
 
-  async sendMessage(text: string, downloadUrl?: string, anonym = false): Promise<void> {
-    await this.client.chat.sendMessage(this.id, text, downloadUrl, anonym);
+  async sendMessage(options: NewMessageOptions): Promise<void> {
+    await this.client.chat.sendMessage(this.id, options);
   }
 
   async vote(type: VoteType): Promise<void> {

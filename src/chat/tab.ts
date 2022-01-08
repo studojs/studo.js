@@ -1,6 +1,7 @@
 import { Client } from '../client';
 import { Collection, parseRawIds } from '../utils';
 import { Channel } from './channel';
+import { NewTopicOptions } from './command';
 import { Topic } from './topic';
 import { PrivacyType, ToolbarAction, VotingType } from './types';
 
@@ -68,13 +69,8 @@ export class Tab {
     return this.client.cache.channels.get(this.channelId);
   }
 
-  async sendTopic(
-    text: string,
-    topicType = this.defaultTopicType,
-    downloadUrl?: string,
-    anonym = false
-  ): Promise<void> {
-    await this.client.chat.sendTopic(this.id, text, topicType, downloadUrl, anonym);
+  async sendTopic(options: NewTopicOptions): Promise<void> {
+    await this.client.chat.sendTopic(this.id, options);
   }
 
   async subscribe(): Promise<void> {

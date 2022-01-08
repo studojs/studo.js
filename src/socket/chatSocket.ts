@@ -2,6 +2,8 @@ import {
   ClientCommand,
   ClientCommands,
   DecodedServerCommand,
+  NewMessageOptions,
+  NewTopicOptions,
   ServerCommands,
   VoteType,
 } from '../chat';
@@ -102,10 +104,7 @@ export class ChatSocket extends SocketManager<ServerCommands> {
    */
   async sendTopic(
     tabId: string,
-    text: string,
-    topicType: string,
-    downloadUrl?: string,
-    anonym = false
+    { text, topicType = '', downloadUrl, anonym = false }: NewTopicOptions
   ): Promise<void> {
     await this.sendCommand('NewTopic', {
       text,
@@ -158,9 +157,7 @@ export class ChatSocket extends SocketManager<ServerCommands> {
    */
   async sendMessage(
     topicId: string,
-    text: string,
-    downloadUrl?: string,
-    anonym = false
+    { text, downloadUrl, anonym = false }: NewMessageOptions
   ): Promise<void> {
     await this.sendCommand('NewMessage', {
       text,

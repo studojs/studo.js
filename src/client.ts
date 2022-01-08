@@ -1,7 +1,16 @@
 import EventEmitter from 'emittery';
 import { customAlphabet } from 'nanoid';
-import { Cache, Channel, Message, Tab, Topic, UpdateSetting } from './chat';
-import { ChatAction, ChatTag, TopicTypeDescriptor } from './chat/command';
+import {
+  Cache,
+  Channel,
+  ChatAction,
+  ChatTag,
+  Message,
+  Tab,
+  Topic,
+  TopicTypeDescriptor,
+  UpdateSetting,
+} from './chat';
 import { RestManager } from './rest/restManager';
 import { ChatSocket } from './socket';
 

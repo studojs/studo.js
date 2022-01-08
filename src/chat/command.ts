@@ -40,25 +40,28 @@ export interface MessageCommand extends ClientCommand {
 export interface ChannelUserAction extends ChannelCommand {
   actionChain: string[];
 }
-export interface EditMessage extends MessageCommand {
+export interface EditMessageOptions {
   anonym: boolean;
   newText: string;
 }
+export type EditMessage = Required<EditMessageOptions> & MessageCommand;
 export interface MessageUserAction extends MessageCommand {
   actionChain: string[];
   parameters: Record<string, Record<string, string>>;
 }
-export interface NewMessage extends TopicCommand {
-  anonym: boolean;
-  downloadUrl?: string;
+export interface NewMessageOptions {
+  anonym?: boolean;
+  downloadUrl?: string | undefined;
   text: string;
 }
-export interface NewTopic extends TabCommand {
-  anonym: boolean;
-  downloadUrl?: string;
+export type NewMessage = Required<NewMessageOptions> & TopicCommand;
+export interface NewTopicOptions {
+  anonym?: boolean;
+  downloadUrl?: string | undefined;
   text: string;
-  topicType: string;
+  topicType?: string;
 }
+export type NewTopic = Required<NewTopicOptions> & TabCommand;
 export interface SearchTabContent extends TabCommand {
   searchTerm: string;
 }

@@ -5,6 +5,7 @@
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "strict": true,
+    "exactOptionalPropertyTypes": true,
     "noImplicitAny": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
