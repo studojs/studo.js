@@ -15,10 +15,8 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "test": "jest",
     "lint": "eslint src/ --ext .js,.ts",
     "format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
-    "prepare": "husky install",
     "prepublishOnly": "npm run build"
   },
   "exports": {
@@ -39,7 +37,6 @@
     "typescript"
   ],
   "dependencies": {
-    "cross-fetch": "^3.1.4",
     "emittery": "^0.10.0",
     "fflate": "^0.7.2",
     "nanoid": "^3.1.30",
@@ -47,7 +44,6 @@
     "socket.io-client": "^2.4.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.3",
     "@types/socket.io-client": "^1.4.36",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
@@ -55,13 +51,10 @@
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.4",
-    "jest": "^27.4.5",
     "prettier": "^2.5.1",
     "rollup": "^2.62.0",
     "rollup-plugin-dts": "^4.1.0",
     "rollup-plugin-esbuild": "^4.8.1",
-    "ts-jest": "^27.1.2",
     "typescript": "^4.5.4"
   }
 }

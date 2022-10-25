@@ -1,4 +1,3 @@
-import { fetch } from 'cross-fetch';
 import { Client, randomInstallationId } from '../client';
 import {
   applicationId,

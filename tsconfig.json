@@ -12,12 +12,6 @@
     "noImplicitOverride": true,
     "declaration": false,
     "pretty": false,
-    "lib": [
-      "ESNext"
-    ],
-    "types": [
-      "jest"
-    ]
   },
   "include": [
     "src/**/*.ts",
