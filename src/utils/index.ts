@@ -9,3 +9,13 @@ export * from './encoder';
 export function parseRawIds(rawStr: string): string[] {
   return rawStr ? rawStr.split('|') : [];
 }
+
+/**
+ * @param length size in bytes
+ * @returns hex string
+ */
+export function getRandomValues(length: number): string {
+  const buf = new Uint8Array(length);
+  crypto.getRandomValues(buf);
+  return buf.reduce((acc, num) => acc + num.toString(16).padStart(2, '0'), '');
+}

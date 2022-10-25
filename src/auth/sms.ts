@@ -1,8 +1,8 @@
-import { customAlphabet } from 'nanoid';
 import { randomInstallationId } from '../client';
 import { deviceName } from '../config';
 import { RestManager } from '../rest/restManager';
 import { GenericResponse } from '../rest/schema/shared';
+import { getRandomValues } from '../utils';
 
 export type SendVerificationSmsResponse =
   | 'SUCCESS'
@@ -29,7 +29,7 @@ export class SmsVerification {
       countryPrefix,
       phoneNumber,
       createNewUser: false,
-      secret: generateSecret(),
+      secret: getRandomValues(32),
       installationId: randomInstallationId(),
       deviceName,
     };
@@ -66,9 +66,3 @@ export class SmsVerification {
     }
   }
 }
-
-/**
- * @see com.moshbit.studo.auth.sms.SmsPhoneNumberFragment$onViewCreated$5
- * @returns 32 byte hex string
- */
-const generateSecret = customAlphabet('0123456789abcdef', 64);

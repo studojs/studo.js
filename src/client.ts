@@ -1,5 +1,4 @@
 import EventEmitter from 'emittery';
-import { customAlphabet } from 'nanoid';
 import {
   Cache,
   Channel,
@@ -13,8 +12,9 @@ import {
 } from './chat';
 import { RestManager } from './rest/restManager';
 import { ChatSocket } from './socket';
+import { getRandomValues } from './utils';
 
-export const randomInstallationId = customAlphabet('0123456789abcdef', 20);
+export const randomInstallationId = () => getRandomValues(10);
 
 interface ClientEvents {
   channelUpdate: Channel;
