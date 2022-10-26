@@ -5,7 +5,6 @@
   "author": "j4k0xb",
   "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "license": "GPL-3.0",
   "sideEffects": false,
@@ -13,16 +12,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
+    "build": "tsup src/index.ts --format esm --sourcemap --dts",
+    "watch": "npm run build -- --watch",
     "lint": "eslint src/ --ext .js,.ts",
     "format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
     "prepublishOnly": "npm run build"
-  },
-  "exports": {
-    "require": "./dist/index.js",
-    "import": "./dist/index.mjs",
-    "default": "./dist/index.mjs"
   },
   "repository": "https://github.com/studojs/studo.js",
   "homepage": "https://github.com/studojs/studo.js#readme",
@@ -46,14 +40,11 @@
     "@types/socket.io-client": "^1.4.36",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
-    "esbuild": "^0.14.8",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.1",
-    "rollup": "^2.62.0",
-    "rollup-plugin-dts": "^4.1.0",
-    "rollup-plugin-esbuild": "^4.8.1",
+    "tsup": "^6.3.0",
     "typescript": "^4.5.4"
   }
 }
