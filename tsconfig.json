@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2019",
-    "sourceMap": false,
+    "outDir": "dist",
+    "declaration": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "strict": true,
@@ -10,8 +11,6 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitOverride": true,
-    "declaration": false,
-    "pretty": false,
   },
   "include": [
     "src/**/*.ts"
