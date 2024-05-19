@@ -43,7 +43,7 @@ export class SmsVerification {
     const body = JSON.stringify({ ...this.body, source: 'android-button' });
     const response = await RestManager.request('POST', 'auth/sendVerificationSms', { body });
     const text = (await response.text()) as SendVerificationSmsResponse;
-    if (text !== 'SUCCESS') throw new Error(text);
+    if (!text.includes('SUCCESS')) throw new Error(text);
   }
 
   /**
