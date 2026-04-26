@@ -1,6 +1,6 @@
 export const applicationId = 'com.moshbit.studo';
 export const appVersionCode = 4060;
-export const appVersionName = '4.06.0';
+export const appVersionName = '4.64.3';
 export const appVersionDate = '2021-09-19T02:00:01.000Z';
 
 export const deviceName = 'studo.js client';
